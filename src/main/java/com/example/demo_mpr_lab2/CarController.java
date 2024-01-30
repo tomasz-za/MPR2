@@ -14,6 +14,7 @@ public class CarController {
 
     public CarController(CarService service) {
         this.service = service;
+
     }
 
     @GetMapping ("/index")
@@ -80,12 +81,17 @@ public class CarController {
 @PostMapping("Car/add")
     public Car addCarToRepository(@RequestBody Car car){
         return this.service.addCarToRepository(car);
-        //return "cars";
+
 }
 
     @PostMapping("/add1")
     public String addCarToRepository1(@RequestParam String name, @RequestParam String color){
         this.service.addCarToRepository(new Car(name, color));
+
+        //String info1 = "DONE";
+
+
+
         return "/add_car";
 
     }
@@ -100,7 +106,7 @@ public class CarController {
     //public void updateCarInRepository1(@PathVariable("name") String name,@RequestBody Car updatedCar){
 
         service.updateCarByName(name, new Car(name, color));
-        return "cars";
+        return "edit_car";
     }
 
 @DeleteMapping("Car/delete/{name}")
