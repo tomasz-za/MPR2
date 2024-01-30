@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static io.restassured.RestAssured.when;
-import static io.restassured.RestAssured.with;
+//import static io.restassured.RestAssured.when;
+//import static io.restassured.RestAssured.with;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

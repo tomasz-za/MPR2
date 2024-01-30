@@ -17,10 +17,10 @@ public class CarController {
 
     }
 
-    @GetMapping ("/index")
-    public String home(ModelMap map) {
-        map.put("hello","hello tomeK2");
-        return "index"; //resources/templates/index.html
+    @GetMapping ("/")
+    public String home() {
+        //map.put("hello","hello tomeK2");
+        return "repositores"; //resources/templates/index.html
     }
     @GetMapping(value = "/all")
     public String ee(){
@@ -32,6 +32,7 @@ public class CarController {
         model.addAttribute("cars",service.displayCarRepository());
         return "cars";
     }
+
 
     @GetMapping("/add_car")
     public String addCar(){
