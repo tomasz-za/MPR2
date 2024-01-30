@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ADD CARRRRRR</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/add1}" method="post">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" th:name="name" /></td>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td><input type="text" th:name="color" /></td>
+        </tr>
+
+        <tr>
+            <td><button type="submit">add_car</button></td>
+        </tr>
+        <tr>
+            <a href="/cars">show cars</a>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
